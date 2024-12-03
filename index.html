@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pierre-Feuille-Ciseaux</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Pierre Ciseaux Feuille</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="game-container">
-    <h1>Pierre-Feuille-Ciseaux</h1>
-    <div id="user-choice">
-      <h2>Choisissez votre option :</h2>
-      <button onclick="play('pierre')">Pierre</button>
-      <button onclick="play('feuille')">Feuille</button>
-      <button onclick="play('ciseaux')">Ciseaux</button>
+    <div id="game-container">
+        <h1>Jeu Pierre Ciseaux Feuille</h1>
+        <h2>Choisissez une option :</h2>
+        <div id="choices">
+            <div class="choice" id="rock">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <path d="M40 10 L60 10 L70 30 L50 50 L30 30 Z" fill="gray"/>
+                </svg>
+                <span>Pierre</span>
+            </div>
+            <div class="choice" id="scissors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <path d="M10 50 L50 10 L70 30 L30 70 Z" fill="silver"/>
+                </svg>
+                <span>Ciseaux</span>
+            </div>
+            <div class="choice" id="paper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <rect width="70" height="70" fill="lightgray"/>
+                </svg>
+                <span>Feuille</span>
+            </div>
+        </div>
+        <div id="result"></div>
+        <div id="score-board">
+            <p>Score: <span id="score">0</span></p>
+        </div>
     </div>
-    
-    <div id="result">
-      <h2 id="result-text">Faites votre choix !</h2>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
