@@ -25,4 +25,26 @@ function determineWinner(userChoice, aiChoice) {
       return "Vous avez perdu !";
     }
   }
+  let userScore = 0;
+  let aiScore = 0;
+  
+  function play(userChoice) {
+    let aiChoice = choixIA[Math.floor(Math.random() * choixIA.length)];
+    let resultText = determineWinner(userChoice, aiChoice);
+  
+ 
+    if (resultText === "Vous avez gagné !") {
+      userScore++;
+    } else if (resultText === "Vous avez perdu !") {
+      aiScore++;
+    }
+  
+  
+    document.getElementById('result-text').innerHTML = `Vous avez choisi ${userChoice}. L'IA a choisi ${aiChoice}. ${resultText}`;
+    updateScores();
+  }
+  
+  function updateScores() {
+    document.getElementById('score').innerHTML = `Vous: ${userScore} | IA: ${aiScore}`;
+  }
   
