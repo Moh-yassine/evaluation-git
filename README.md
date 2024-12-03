@@ -1,4 +1,4 @@
 # evaluation-git
 
 - MALIJI Mohamed
--ANOUAR Abdelmajid
+- ANOUAR Abdelmajid
